@@ -15,7 +15,7 @@ main() {
     local main_domain="mysite.com"
     local drush_alias="@mysite.dev"
     local install_profile="minimal"
-    local template_folder="site-template"
+    local template_folder="default"
 
     #####################   DO NOT EDIT BELOW THIS LINE!   #####################
 
@@ -104,7 +104,7 @@ main() {
     fi
 
     # Create a new drush alias file for this domain
-    sed "s/DOMAIN/${db_name}/" "${drush_dir}/alias-template.php" >  "${drush_dir}/${db_name}.aliases.drushrc.php"
+    sed "s/SUBDOMAIN/${db_name}/" "${drush_dir}/alias-template.php" >  "${drush_dir}/${db_name}.aliases.drushrc.php"
     git add  "${drush_dir}/${db_name}.aliases.drushrc.php"
 
     # Final commit
