@@ -1,6 +1,6 @@
 <?php
 /**
- * @file ucsf.drush.inc
+ * @file ace_multisite.drush.inc
  *
  * Drush custom commands for managing UCSF's Drupal environments.
  */
@@ -8,7 +8,7 @@
 /**
  * Implements COMMANDFILE_drush_command().
  */
-function ucsf_drush_command() {
+function ace_multisite_drush_command() {
   $items = array();
     $items['quiet'] = array(
       'description' => 'This does not do anything.',
@@ -29,7 +29,7 @@ function ucsf_drush_command() {
  *
  * Does nothing but itself, but may be useful if run via the <code>iterator</code> script.
  */
-function drush_ucsf_quiet() {}
+function drush_ace_multisite_quiet() {}
 
 /**
  * Implements drush_COMMANDFILE_COMMANDNAME().
@@ -39,7 +39,7 @@ function drush_ucsf_quiet() {}
  *
  * @param $output_dir The directory to generate the output in.
  */
-function drush_ucsf_modulemadness($output_dir) {
+function drush_ace_multisite_modulemadness($output_dir) {
 
   $output_dir = rtrim($output_dir, DIRECTORY_SEPARATOR);
 
